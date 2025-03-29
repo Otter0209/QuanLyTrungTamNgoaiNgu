@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TrungTamNgoaiNguModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ATTENDANCE">
+    <Key>
+      <PropertyRef Name="AttendanceID" />
+    </Key>
+    <Property Name="AttendanceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EnrollmentID" Type="int" Nullable="false" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CLASS">
+    <Key>
+      <PropertyRef Name="ClassID" />
+    </Key>
+    <Property Name="ClassID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClassName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Schedule" Type="nvarchar" MaxLength="100" />
+    <Property Name="Location" Type="nvarchar" MaxLength="100" />
+    <Property Name="TeacherID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ENROLLMENT">
+    <Key>
+      <PropertyRef Name="EnrollmentID" />
+    </Key>
+    <Property Name="EnrollmentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentID" Type="int" Nullable="false" />
+    <Property Name="ClassID" Type="int" Nullable="false" />
+    <Property Name="RegistrationDate" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FEEDBACK">
+    <Key>
+      <PropertyRef Name="FeedbackID" />
+    </Key>
+    <Property Name="FeedbackID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EnrollmentID" Type="int" Nullable="false" />
+    <Property Name="TeacherID" Type="int" Nullable="false" />
+    <Property Name="Comments" Type="nvarchar(max)" />
+    <Property Name="Date" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PARENT">
+    <Key>
+      <PropertyRef Name="ParentID" />
+    </Key>
+    <Property Name="ParentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="ROLE">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleName" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="STUDENT">
+    <Key>
+      <PropertyRef Name="StudentID" />
+    </Key>
+    <Property Name="StudentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" />
+    <Property Name="DateOfBirth" Type="date" />
+    <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="ParentID" Type="int" />
+  </EntityType>
+  <EntityType Name="TEACHER">
+    <Key>
+      <PropertyRef Name="TeacherID" />
+    </Key>
+    <Property Name="TeacherID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" />
+    <Property Name="Expertise" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="USER">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="PasswordHash" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" />
+    <Property Name="RoleID" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Attendance_Enrollment">
+    <End Role="ENROLLMENT" Type="Self.ENROLLMENT" Multiplicity="1" />
+    <End Role="ATTENDANCE" Type="Self.ATTENDANCE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ENROLLMENT">
+        <PropertyRef Name="EnrollmentID" />
+      </Principal>
+      <Dependent Role="ATTENDANCE">
+        <PropertyRef Name="EnrollmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Class_Teacher">
+    <End Role="TEACHER" Type="Self.TEACHER" Multiplicity="1" />
+    <End Role="CLASS" Type="Self.CLASS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TEACHER">
+        <PropertyRef Name="TeacherID" />
+      </Principal>
+      <Dependent Role="CLASS">
+        <PropertyRef Name="TeacherID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Enrollment_Class">
+    <End Role="CLASS" Type="Self.CLASS" Multiplicity="1" />
+    <End Role="ENROLLMENT" Type="Self.ENROLLMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLASS">
+        <PropertyRef Name="ClassID" />
+      </Principal>
+      <Dependent Role="ENROLLMENT">
+        <PropertyRef Name="ClassID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Enrollment_Student">
+    <End Role="STUDENT" Type="Self.STUDENT" Multiplicity="1" />
+    <End Role="ENROLLMENT" Type="Self.ENROLLMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="STUDENT">
+        <PropertyRef Name="StudentID" />
+      </Principal>
+      <Dependent Role="ENROLLMENT">
+        <PropertyRef Name="StudentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Feedback_Enrollment">
+    <End Role="ENROLLMENT" Type="Self.ENROLLMENT" Multiplicity="1" />
+    <End Role="FEEDBACK" Type="Self.FEEDBACK" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ENROLLMENT">
+        <PropertyRef Name="EnrollmentID" />
+      </Principal>
+      <Dependent Role="FEEDBACK">
+        <PropertyRef Name="EnrollmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Feedback_Teacher">
+    <End Role="TEACHER" Type="Self.TEACHER" Multiplicity="1" />
+    <End Role="FEEDBACK" Type="Self.FEEDBACK" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TEACHER">
+        <PropertyRef Name="TeacherID" />
+      </Principal>
+      <Dependent Role="FEEDBACK">
+        <PropertyRef Name="TeacherID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Student_Parent">
+    <End Role="PARENT" Type="Self.PARENT" Multiplicity="0..1" />
+    <End Role="STUDENT" Type="Self.STUDENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PARENT">
+        <PropertyRef Name="ParentID" />
+      </Principal>
+      <Dependent Role="STUDENT">
+        <PropertyRef Name="ParentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Role">
+    <End Role="ROLE" Type="Self.ROLE" Multiplicity="1" />
+    <End Role="USER" Type="Self.USER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ROLE">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="USER">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TrungTamNgoaiNguModelStoreContainer">
+    <EntitySet Name="ATTENDANCE" EntityType="Self.ATTENDANCE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLASS" EntityType="Self.CLASS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ENROLLMENT" EntityType="Self.ENROLLMENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FEEDBACK" EntityType="Self.FEEDBACK" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PARENT" EntityType="Self.PARENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ROLE" EntityType="Self.ROLE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="STUDENT" EntityType="Self.STUDENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TEACHER" EntityType="Self.TEACHER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USER" EntityType="Self.USER" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Attendance_Enrollment" Association="Self.FK_Attendance_Enrollment">
+      <End Role="ENROLLMENT" EntitySet="ENROLLMENT" />
+      <End Role="ATTENDANCE" EntitySet="ATTENDANCE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Class_Teacher" Association="Self.FK_Class_Teacher">
+      <End Role="TEACHER" EntitySet="TEACHER" />
+      <End Role="CLASS" EntitySet="CLASS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Enrollment_Class" Association="Self.FK_Enrollment_Class">
+      <End Role="CLASS" EntitySet="CLASS" />
+      <End Role="ENROLLMENT" EntitySet="ENROLLMENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Enrollment_Student" Association="Self.FK_Enrollment_Student">
+      <End Role="STUDENT" EntitySet="STUDENT" />
+      <End Role="ENROLLMENT" EntitySet="ENROLLMENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Feedback_Enrollment" Association="Self.FK_Feedback_Enrollment">
+      <End Role="ENROLLMENT" EntitySet="ENROLLMENT" />
+      <End Role="FEEDBACK" EntitySet="FEEDBACK" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Feedback_Teacher" Association="Self.FK_Feedback_Teacher">
+      <End Role="TEACHER" EntitySet="TEACHER" />
+      <End Role="FEEDBACK" EntitySet="FEEDBACK" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Student_Parent" Association="Self.FK_Student_Parent">
+      <End Role="PARENT" EntitySet="PARENT" />
+      <End Role="STUDENT" EntitySet="STUDENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Role" Association="Self.FK_User_Role">
+      <End Role="ROLE" EntitySet="ROLE" />
+      <End Role="USER" EntitySet="USER" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

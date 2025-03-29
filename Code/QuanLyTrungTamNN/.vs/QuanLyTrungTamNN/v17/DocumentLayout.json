@@ -1,0 +1,186 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|d:\\th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\quanlytrungtamngoaingu\\code\\quanlytrungtamnn\\quanlytrungtamnn\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|solutionrelative:quanlytrungtamnn\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|d:\\th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\quanlytrungtamngoaingu\\code\\quanlytrungtamnn\\quanlytrungtamnn\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|solutionrelative:quanlytrungtamnn\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|d:\\th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\quanlytrungtamngoaingu\\code\\quanlytrungtamnn\\quanlytrungtamnn\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|solutionrelative:quanlytrungtamnn\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\quanlytrungtamnn\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|solutionrelative:quanlytrungtamnn\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\quanlytrungtamnn\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|solutionrelative:quanlytrungtamnn\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\quanlytrungtamnn\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|solutionrelative:quanlytrungtamnn\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\quanlytrungtamnn\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|solutionrelative:quanlytrungtamnn\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\quanlytrungtamnn\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|solutionrelative:quanlytrungtamnn\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\quanlytrungtamnn\\controllers\\classescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|solutionrelative:quanlytrungtamnn\\controllers\\classescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\quanlytrungtamnn\\models\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|solutionrelative:quanlytrungtamnn\\models\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 100,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "STUDENTsController.cs",
+              "DocumentMoniker": "D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Controllers\\STUDENTsController.cs",
+              "RelativeDocumentMoniker": "QuanLyTrungTamNN\\Controllers\\STUDENTsController.cs",
+              "ToolTip": "D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Controllers\\STUDENTsController.cs",
+              "RelativeToolTip": "QuanLyTrungTamNN\\Controllers\\STUDENTsController.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAwwAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T06:37:56.084Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DashBoard.cshtml",
+              "DocumentMoniker": "D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Views\\Admin\\DashBoard.cshtml",
+              "RelativeDocumentMoniker": "QuanLyTrungTamNN\\Views\\Admin\\DashBoard.cshtml",
+              "ToolTip": "D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Views\\Admin\\DashBoard.cshtml",
+              "RelativeToolTip": "QuanLyTrungTamNN\\Views\\Admin\\DashBoard.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAmwCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-29T15:33:53.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "QuanLyTrungTamNN\\Controllers\\AdminController.cs",
+              "ToolTip": "D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "QuanLyTrungTamNN\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T15:30:06.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "QuanLyTrungTamNN\\Views\\Account\\Login.cshtml",
+              "ToolTip": "D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "QuanLyTrungTamNN\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAA4AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-29T15:13:18.204Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "QuanLyTrungTamNN\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "QuanLyTrungTamNN\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAuwEkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T15:12:35.848Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "QuanLyTrungTamNN\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "QuanLyTrungTamNN\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T15:12:14.771Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CLASSesController.cs",
+              "DocumentMoniker": "D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Controllers\\CLASSesController.cs",
+              "RelativeDocumentMoniker": "QuanLyTrungTamNN\\Controllers\\CLASSesController.cs",
+              "ToolTip": "D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Controllers\\CLASSesController.cs",
+              "RelativeToolTip": "QuanLyTrungTamNN\\Controllers\\CLASSesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T15:12:11.851Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Model1.edmx [Diagram1]",
+              "DocumentMoniker": "D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Models\\Model1.edmx",
+              "RelativeDocumentMoniker": "QuanLyTrungTamNN\\Models\\Model1.edmx",
+              "ToolTip": "D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Models\\Model1.edmx [Diagram1]",
+              "RelativeToolTip": "QuanLyTrungTamNN\\Models\\Model1.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2025-03-29T15:10:01.892Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "QuanLyTrungTamNN\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "QuanLyTrungTamNN\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAACwAAAAAAAAAAAAmwFUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-29T15:08:44.216Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Web.config",
+              "DocumentMoniker": "D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Web.config",
+              "RelativeDocumentMoniker": "QuanLyTrungTamNN\\Web.config",
+              "ToolTip": "D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Web.config",
+              "RelativeToolTip": "QuanLyTrungTamNN\\Web.config",
+              "ViewState": "AgIAADMAAAAAAAAAAAAvwD4AAAD1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-03-29T04:02:20.613Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

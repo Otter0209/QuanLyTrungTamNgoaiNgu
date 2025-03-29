@@ -1,0 +1,42 @@
+﻿@model QuanLyTrungTamNN.Models.ENROLLMENT
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ENROLLMENT</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RegistrationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RegistrationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CLASS.ClassName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CLASS.ClassName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.STUDENT.FullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.STUDENT.FullName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EnrollmentID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

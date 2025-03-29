@@ -1,0 +1,45 @@
+﻿@model IEnumerable<QuanLyTrungTamNN.Models.ENROLLMENT>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RegistrationDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CLASS.ClassName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STUDENT.FullName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RegistrationDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CLASS.ClassName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.STUDENT.FullName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EnrollmentID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EnrollmentID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EnrollmentID })
+        </td>
+    </tr>
+}
+
+</table>

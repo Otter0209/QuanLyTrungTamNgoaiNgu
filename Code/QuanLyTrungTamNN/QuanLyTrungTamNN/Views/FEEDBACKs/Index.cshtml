@@ -1,0 +1,51 @@
+﻿@model IEnumerable<QuanLyTrungTamNN.Models.FEEDBACK>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Comments)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ENROLLMENT.EnrollmentID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TEACHER.FullName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Comments)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ENROLLMENT.EnrollmentID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TEACHER.FullName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.FeedbackID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.FeedbackID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.FeedbackID })
+        </td>
+    </tr>
+}
+
+</table>

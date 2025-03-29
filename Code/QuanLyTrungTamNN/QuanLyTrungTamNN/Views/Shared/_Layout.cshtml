@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewBag.Title - Quản Lý Trung Tâm Ngoại Ngữ</title>
+
+    @Styles.Render("~/Content/css")
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="@Url.Action("Index", "Home")">Trung Tâm Ngoại Ngữ</a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        @Html.ActionLink("Trang chủ", "Index", "Home", null, new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Liên hệ", "Contact", "Home", null, new { @class = "nav-link" })
+                    </li>
+                    @if (Session["Username"] != null)
+                    {
+                        <li class="nav-item">
+                            @Html.ActionLink("Đăng xuất", "Logout", "Account", null, new { @class = "nav-link" })
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item">
+                            @Html.ActionLink("Đăng nhập", "Login", "Account", null, new { @class = "nav-link" })
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <div class="bg-light border-end" id="sidebar">
+            <div class="list-group list-group-flush">
+                @if (Session["Role"] != null && Session["Role"].ToString() == "Admin")
+                {
+                    <a href="@Url.Action("Dashboard", "Admin")" class="list-group-item list-group-item-action">Dashboard</a>
+                    <a href="@Url.Action("Index", "Students")" class="list-group-item list-group-item-action">Quản lý học viên</a>
+                    <a href="@Url.Action("Index", "Teachers")" class="list-group-item list-group-item-action">Quản lý giáo viên</a>
+                    <a href="@Url.Action("Index", "Classes")" class="list-group-item list-group-item-action">Quản lý lớp học</a>
+                }
+                else if (Session["Role"] != null && Session["Role"].ToString() == "Teacher")
+                {
+                    <a href="@Url.Action("MyClasses", "Teacher")" class="list-group-item list-group-item-action">Danh sách lớp dạy</a>
+                    <a href="@Url.Action("Attendance", "Teacher")" class="list-group-item list-group-item-action">Điểm danh</a>
+                }
+                else if (Session["Role"] != null && Session["Role"].ToString() == "Student")
+                {
+                    <a href="@Url.Action("MyCourses", "Student")" class="list-group-item list-group-item-action">Lớp đã đăng ký</a>
+                    <a href="@Url.Action("MyAttendance", "Student")" class="list-group-item list-group-item-action">Điểm danh cá nhân</a>
+                }
+            </div>
+        </div>
+
+        <!-- Nội dung chính -->
+        <div class="container-fluid p-4">
+            @RenderBody()
+        </div>
+    </div>
+
+    <footer class="text-center mt-4 p-3 bg-dark text-white">
+        &copy; @DateTime.Now.Year - Trung Tâm Ngoại Ngữ
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

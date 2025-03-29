@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Dashboard - Admin";
+    Layout = "~/Views/Shared/_Layout.cshtml"; <!-- Đảm bảo dùng Layout chung -->
+}
+
+<div class="container mt-4">
+    <h2 class="text-center">Trang Quản Trị</h2>
+    <hr />
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card text-white bg-primary mb-3">
+                <div class="card-header">Học Viên</div>
+                <div class="card-body">
+                    <h5 class="card-title">@ViewBag.StudentCount học viên</h5>
+                    <a href="@Url.Action("Index", "Students")" class="btn btn-light">Quản lý</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card text-white bg-success mb-3">
+                <div class="card-header">Giáo Viên</div>
+                <div class="card-body">
+                    <h5 class="card-title">@ViewBag.TeacherCount giáo viên</h5>
+                    <a href="@Url.Action("Index", "Teachers")" class="btn btn-light">Quản lý</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card text-white bg-warning mb-3">
+                <div class="card-header">Lớp Học</div>
+                <div class="card-body">
+                    <h5 class="card-title">@ViewBag.ClassCount lớp học</h5>
+                    <a href="@Url.Action("Index", "Classes")" class="btn btn-light">Quản lý</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
