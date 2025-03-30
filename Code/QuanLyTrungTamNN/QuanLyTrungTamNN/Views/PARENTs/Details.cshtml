@@ -1,42 +1,26 @@
 ﻿@model QuanLyTrungTamNN.Models.PARENT
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Parent Details";
 }
 
-<h2>Details</h2>
-
-<div>
-    <h4>PARENT</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.FullName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.FullName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PhoneNumber)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PhoneNumber)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-
-    </dl>
+<div class="container mt-4">
+    <div class="card shadow-lg border-0">
+        <div class="card-header bg-primary text-white">
+            <h3 class="mb-0">Parent Details</h3>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <p><strong>@Html.DisplayNameFor(model => model.FullName):</strong> @Html.DisplayFor(model => model.FullName)</p>
+                    <p><strong>@Html.DisplayNameFor(model => model.PhoneNumber):</strong> @Html.DisplayFor(model => model.PhoneNumber)</p>
+                    <p><strong>@Html.DisplayNameFor(model => model.Email):</strong> @Html.DisplayFor(model => model.Email)</p>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer text-center">
+            @Html.ActionLink("Edit", "Edit", new { id = Model.ParentID }, new { @class = "btn btn-warning" })
+            @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-secondary" })
+        </div>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ParentID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

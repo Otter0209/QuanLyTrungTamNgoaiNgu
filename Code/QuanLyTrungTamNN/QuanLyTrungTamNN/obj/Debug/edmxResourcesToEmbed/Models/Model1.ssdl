@@ -9,6 +9,18 @@
     <Property Name="Date" Type="date" Nullable="false" />
     <Property Name="Status" Type="nvarchar" MaxLength="50" />
   </EntityType>
+  <EntityType Name="BUOIHOC">
+    <Key>
+      <PropertyRef Name="BuoiHocID" />
+    </Key>
+    <Property Name="BuoiHocID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenBuoiHoc" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="PhongHoc" Type="nvarchar" MaxLength="50" />
+    <Property Name="StartTime" Type="time" Precision="7" Nullable="false" />
+    <Property Name="EndTime" Type="time" Precision="7" Nullable="false" />
+    <Property Name="TeacherID" Type="int" Nullable="false" />
+    <Property Name="ClassID" Type="int" />
+  </EntityType>
   <EntityType Name="CLASS">
     <Key>
       <PropertyRef Name="ClassID" />
@@ -18,6 +30,7 @@
     <Property Name="Schedule" Type="nvarchar" MaxLength="100" />
     <Property Name="Location" Type="nvarchar" MaxLength="100" />
     <Property Name="TeacherID" Type="int" Nullable="false" />
+    <Property Name="ClassTime" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="ENROLLMENT">
     <Key>
@@ -65,6 +78,7 @@
     <Property Name="DateOfBirth" Type="date" />
     <Property Name="Address" Type="nvarchar" MaxLength="200" />
     <Property Name="ParentID" Type="int" />
+    <Property Name="AttendanceStatus" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="TEACHER">
     <Key>
@@ -88,7 +102,9 @@
     <Property Name="RoleID" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="FK_Attendance_Enrollment">
-    <End Role="ENROLLMENT" Type="Self.ENROLLMENT" Multiplicity="1" />
+    <End Role="ENROLLMENT" Type="Self.ENROLLMENT" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="ATTENDANCE" Type="Self.ATTENDANCE" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ENROLLMENT">
@@ -96,6 +112,30 @@
       </Principal>
       <Dependent Role="ATTENDANCE">
         <PropertyRef Name="EnrollmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BuoiHoc_Class">
+    <End Role="CLASS" Type="Self.CLASS" Multiplicity="0..1" />
+    <End Role="BUOIHOC" Type="Self.BUOIHOC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLASS">
+        <PropertyRef Name="ClassID" />
+      </Principal>
+      <Dependent Role="BUOIHOC">
+        <PropertyRef Name="ClassID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BuoiHoc_Teacher">
+    <End Role="TEACHER" Type="Self.TEACHER" Multiplicity="1" />
+    <End Role="BUOIHOC" Type="Self.BUOIHOC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TEACHER">
+        <PropertyRef Name="TeacherID" />
+      </Principal>
+      <Dependent Role="BUOIHOC">
+        <PropertyRef Name="TeacherID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -124,7 +164,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Enrollment_Student">
-    <End Role="STUDENT" Type="Self.STUDENT" Multiplicity="1" />
+    <End Role="STUDENT" Type="Self.STUDENT" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="ENROLLMENT" Type="Self.ENROLLMENT" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="STUDENT">
@@ -136,7 +178,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Feedback_Enrollment">
-    <End Role="ENROLLMENT" Type="Self.ENROLLMENT" Multiplicity="1" />
+    <End Role="ENROLLMENT" Type="Self.ENROLLMENT" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="FEEDBACK" Type="Self.FEEDBACK" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ENROLLMENT">
@@ -185,6 +229,7 @@
   </Association>
   <EntityContainer Name="TrungTamNgoaiNguModelStoreContainer">
     <EntitySet Name="ATTENDANCE" EntityType="Self.ATTENDANCE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BUOIHOC" EntityType="Self.BUOIHOC" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CLASS" EntityType="Self.CLASS" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ENROLLMENT" EntityType="Self.ENROLLMENT" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="FEEDBACK" EntityType="Self.FEEDBACK" Schema="dbo" store:Type="Tables" />
@@ -196,6 +241,14 @@
     <AssociationSet Name="FK_Attendance_Enrollment" Association="Self.FK_Attendance_Enrollment">
       <End Role="ENROLLMENT" EntitySet="ENROLLMENT" />
       <End Role="ATTENDANCE" EntitySet="ATTENDANCE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BuoiHoc_Class" Association="Self.FK_BuoiHoc_Class">
+      <End Role="CLASS" EntitySet="CLASS" />
+      <End Role="BUOIHOC" EntitySet="BUOIHOC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BuoiHoc_Teacher" Association="Self.FK_BuoiHoc_Teacher">
+      <End Role="TEACHER" EntitySet="TEACHER" />
+      <End Role="BUOIHOC" EntitySet="BUOIHOC" />
     </AssociationSet>
     <AssociationSet Name="FK_Class_Teacher" Association="Self.FK_Class_Teacher">
       <End Role="TEACHER" EntitySet="TEACHER" />

@@ -1,66 +1,48 @@
 ﻿@model QuanLyTrungTamNN.Models.STUDENT
-
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Chi tiết Học viên";
 }
 
-<h2>Details</h2>
-
-<div>
-    <h4>STUDENT</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.FullName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.FullName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PhoneNumber)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PhoneNumber)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.DateOfBirth)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.DateOfBirth)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Address)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Address)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PARENT.FullName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PARENT.FullName)
-        </dd>
-
-    </dl>
+<div class="container mt-4">
+    <div class="card shadow-lg border-0">
+        <div class="card-header bg-primary text-white text-center">
+            <h3 class="mb-0"><i class="fas fa-user-graduate"></i> Chi tiết Học viên</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-bordered">
+                <tr>
+                    <th><i class="fas fa-id-badge"></i> Mã học viên</th>
+                    <td>@Model.StudentID</td>
+                </tr>
+                <tr>
+                    <th><i class="fas fa-user"></i> Họ và tên</th>
+                    <td>@Model.FullName</td>
+                </tr>
+                <tr>
+                    <th><i class="fas fa-envelope"></i> Email</th>
+                    <td>@Model.Email</td>
+                </tr>
+                <tr>
+                    <th><i class="fas fa-phone"></i> Số điện thoại</th>
+                    <td>@Model.PhoneNumber</td>
+                </tr>
+                <tr>
+                    <th><i class="fas fa-birthday-cake"></i> Ngày sinh</th>
+                    <td>@(Model.DateOfBirth.HasValue ? Model.DateOfBirth.Value.ToShortDateString() : "N/A")</td>
+                </tr>
+                <tr>
+                    <th><i class="fas fa-map-marker-alt"></i> Địa chỉ</th>
+                    <td>@Model.Address</td>
+                </tr>
+                <tr>
+                    <th><i class="fas fa-users"></i> Phụ huynh</th>
+                    <td>@(Model.PARENT != null ? Model.PARENT.FullName : "Không có")</td>
+                </tr>
+            </table>
+        </div>
+        <div class="card-footer text-center">
+            @Html.ActionLink("✏️ Sửa", "Edit", new { id = Model.StudentID }, new { @class = "btn btn-warning mx-2" })
+            @Html.ActionLink("⬅️ Quay lại", "Index", null, new { @class = "btn btn-secondary mx-2" })
+        </div>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.StudentID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

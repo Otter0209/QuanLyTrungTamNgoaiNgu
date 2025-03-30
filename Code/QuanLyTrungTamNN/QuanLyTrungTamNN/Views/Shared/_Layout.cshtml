@@ -43,27 +43,33 @@
             </div>
         </div>
     </nav>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <div class="d-flex">
         <!-- Sidebar -->
         <div class="bg-light border-end" id="sidebar">
             <div class="list-group list-group-flush">
-                @if (Session["Role"] != null && Session["Role"].ToString() == "Admin")
+                @if (Session["Role"] != null)
                 {
-                    <a href="@Url.Action("Dashboard", "Admin")" class="list-group-item list-group-item-action">Dashboard</a>
-                    <a href="@Url.Action("Index", "Students")" class="list-group-item list-group-item-action">Quản lý học viên</a>
-                    <a href="@Url.Action("Index", "Teachers")" class="list-group-item list-group-item-action">Quản lý giáo viên</a>
-                    <a href="@Url.Action("Index", "Classes")" class="list-group-item list-group-item-action">Quản lý lớp học</a>
-                }
-                else if (Session["Role"] != null && Session["Role"].ToString() == "Teacher")
-                {
-                    <a href="@Url.Action("MyClasses", "Teacher")" class="list-group-item list-group-item-action">Danh sách lớp dạy</a>
-                    <a href="@Url.Action("Attendance", "Teacher")" class="list-group-item list-group-item-action">Điểm danh</a>
-                }
-                else if (Session["Role"] != null && Session["Role"].ToString() == "Student")
-                {
-                    <a href="@Url.Action("MyCourses", "Student")" class="list-group-item list-group-item-action">Lớp đã đăng ký</a>
-                    <a href="@Url.Action("MyAttendance", "Student")" class="list-group-item list-group-item-action">Điểm danh cá nhân</a>
+                    string role = Session["Role"].ToString().ToLower();
+                    if (role == "admin")
+                    {
+                        <a href="@Url.Action("Dashboard", "Admin")" class="list-group-item list-group-item-action">Dashboard</a>
+                        <a href="@Url.Action("Index", "STUDENTs")" class="list-group-item list-group-item-action">Quản lý học viên</a>
+                        <a href="@Url.Action("Index", "TEACHERs")" class="list-group-item list-group-item-action">Quản lý giáo viên</a>
+                        <a href="@Url.Action("Index", "CLASSes")" class="list-group-item list-group-item-action">Quản lý lớp học</a>
+                    }
+                    else if (role == "teacher")
+                    {
+                        <a href="@Url.Action("MyClasses", "TEACHERs")" class="list-group-item list-group-item-action">Danh sách lớp học của tôi</a>
+                        <a href="@Url.Action("Attendance", "TEACHERs")" class="list-group-item list-group-item-action">Điểm danh</a>
+                    }
+
+                    else if (role == "student")
+                    {
+                        <a href="@Url.Action("Index", "STUDENTs")" class="list-group-item list-group-item-action">Danh sách học sinh</a>
+                        <a href="@Url.Action("EnrolledClasses", "STUDENTs")" class="list-group-item list-group-item-action">Lớp đã đăng ký</a>
+
+                    }
                 }
             </div>
         </div>

@@ -1,51 +1,62 @@
 ﻿@model IEnumerable<QuanLyTrungTamNN.Models.CLASS>
-
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Danh sách Lớp học";
 }
 
-<h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ClassName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Schedule)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Location)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TEACHER.FullName)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ClassName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Schedule)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Location)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TEACHER.FullName)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ClassID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ClassID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ClassID })
-        </td>
-    </tr>
-}
-
-</table>
+<div class="container mt-4">
+    <div class="card shadow-lg border-0">
+        <div class="card-header bg-primary text-white text-center">
+            <h3 class="mb-0"><i class="fas fa-chalkboard-teacher"></i> Danh sách Lớp học</h3>
+        </div>
+        <div class="card-body">
+            <div class="mb-3 text-end">
+                @Html.ActionLink("➕ Thêm mới", "Create", null, new { @class = "btn btn-success" })
+            </div>
+            <table class="table table-bordered table-hover text-center">
+                <thead class="bg-secondary text-white">
+                    <tr>
+                        <th>Mã lớp</th>
+                        <th>Tên lớp</th>
+                        <th>Lịch học</th>
+                        <th>Địa điểm</th>
+                        <th>Giáo viên chủ nhiệm</th>
+                        <th>Thời gian</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr class="align-middle">
+                            <td>@item.ClassID</td>
+                            <td>@item.ClassName</td>
+                            <td>@item.Schedule</td>
+                            <td>@item.Location</td>
+                            <td>@(item.TEACHER != null ? item.TEACHER.FullName : "Không xác định")</td>
+                            <td>@Html.DisplayFor(m => item.ClassTime)</td>
+                            <td>
+                                <a href="@Url.Action("Details", new { id = item.ClassID })" class="btn btn-info btn-sm">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="@Url.Action("Edit", new { id = item.ClassID })" class="btn btn-warning btn-sm">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <a href="@Url.Action("Delete", new { id = item.ClassID })" class="btn btn-danger btn-sm">
+                                    <i class="fas fa-trash-alt"></i>
+                                </a>
+                                @* Nút "Xem học viên" *@
+                                <a href="@Url.Action("StudentList", "CLASSes", new { id = item.ClassID })" class="btn btn-success btn-sm">
+                                    <i class="fas fa-users"></i>
+                                </a>
+                                @* Cập nhật nút "Điểm danh" để chuyển về TEACHERsController *@
+                                <a href="@Url.Action("MarkAttendance", "TEACHERs", new { classId = item.ClassID })" class="btn btn-success btn-sm">
+                                    <i class="fas fa-check-circle"></i> Điểm danh
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

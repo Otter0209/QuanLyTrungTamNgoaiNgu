@@ -17,8 +17,9 @@ namespace QuanLyTrungTamNN.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public TEACHER()
         {
-            this.CLASSes = new HashSet<CLASS>();
             this.FEEDBACKs = new HashSet<FEEDBACK>();
+            this.CLASSes = new HashSet<CLASS>();
+            this.BUOIHOCs = new HashSet<BUOIHOC>();
         }
     
         public int TeacherID { get; set; }
@@ -28,8 +29,10 @@ namespace QuanLyTrungTamNN.Models
         public string Expertise { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<FEEDBACK> FEEDBACKs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CLASS> CLASSes { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FEEDBACK> FEEDBACKs { get; set; }
+        public virtual ICollection<BUOIHOC> BUOIHOCs { get; set; }
     }
 }

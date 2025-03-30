@@ -1,0 +1,38 @@
+﻿@model IEnumerable<QuanLyTrungTamNN.Models.CLASS>
+
+@{
+    ViewBag.Title = "Danh sách lớp dạy của tôi";
+}
+
+<div class="container mt-4">
+    <h2 class="text-center">Danh sách lớp dạy của tôi</h2>
+    <table class="table table-bordered table-hover text-center shadow-sm">
+        <thead class="bg-primary text-white">
+            <tr>
+                <th>Mã lớp</th>
+                <th>Tên lớp</th>
+                <th>Lịch học</th>
+                <th>Địa điểm</th>
+                <th>Thời gian</th>
+                <th>Hành động</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr class="align-middle">
+                    <td>@item.ClassID</td>
+                    <td>@item.ClassName</td>
+                    <td>@item.Schedule</td>
+                    <td>@item.Location</td>
+                    <td>@item.ClassTime</td>
+                    <td>
+                        <a href="@Url.Action("MarkAttendance", new { classId = item.ClassID })" class="btn btn-success btn-sm">
+                            <i class="fas fa-check-circle"></i> Điểm danh
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

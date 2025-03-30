@@ -1,0 +1,52 @@
+﻿@model QuanLyTrungTamNN.Models.CLASS
+@{
+    ViewBag.Title = "Danh sách học viên của lớp " + Model.ClassName;
+}
+
+<div class="container mt-4">
+    <div class="card shadow-lg border-0">
+        <div class="card-header bg-secondary text-white text-center">
+            <h3 class="mb-0">Lớp: @Model.ClassName</h3>
+        </div>
+        <div class="card-body">
+            <p><strong>Lịch học:</strong> @Model.Schedule</p>
+            <p><strong>Địa điểm:</strong> @Model.Location</p>
+            <p><strong>Thời gian:</strong> @Model.ClassTime</p>
+            <hr />
+            <h4 class="text-center">Danh sách học viên</h4>
+            <table class="table table-bordered table-hover text-center">
+                <thead class="bg-primary text-white">
+                    <tr>
+                        <th>Mã học viên</th>
+                        <th>Họ và tên</th>
+                        <th>Email</th>
+                        <th>Số điện thoại</th>
+                        <th>Ngày sinh</th>
+                        <th>Địa chỉ</th>
+                        <th>Phụ huynh</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var enrollment in Model.ENROLLMENTs)
+                    {
+                        var student = enrollment.STUDENT;
+                        <tr class="align-middle">
+                            <td>@student.StudentID</td>
+                            <td>@student.FullName</td>
+                            <td>@student.Email</td>
+                            <td>@student.PhoneNumber</td>
+                            <td>@(student.DateOfBirth.HasValue ? student.DateOfBirth.Value.ToString("dd/MM/yyyy") : "N/A")</td>
+                            <td>@student.Address</td>
+                            <td>@(student.PARENT != null ? student.PARENT.FullName : "Không có")</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="card-footer text-center">
+            <a href="@Url.Action("MyClasses", "TEACHERs")" class="btn btn-secondary">
+                <i class="fas fa-arrow-left"></i> Quay lại
+            </a>
+        </div>
+    </div>
+</div>

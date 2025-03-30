@@ -1,4 +1,5 @@
-﻿using QuanLyTrungTamNN.Models;
+﻿using Microsoft.Ajax.Utilities;
+using QuanLyTrungTamNN.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,15 +12,13 @@ namespace QuanLyTrungTamNN.Controllers
 {
     public class AccountController : Controller
     {
-        private TrungTamNgoaiNguEntities1 db = new TrungTamNgoaiNguEntities1(); // Đảm bảo đúng DbContext
+        private TrungTamNgoaiNguEntities1 db = new TrungTamNgoaiNguEntities1();
 
-        // GET: Login
         public ActionResult Login()
         {
             return View();
         }
 
-        // POST: Login
         [HttpPost]
         public ActionResult Login(string username, string password)
         {
@@ -29,42 +28,66 @@ namespace QuanLyTrungTamNN.Controllers
                 return View();
             }
 
-            // Tìm user trong database
-            var user = db.USERs.FirstOrDefault(u => u.Username == username);
-
-            if (user == null || user.PasswordHash != password)
+            var user = db.USERs.FirstOrDefault(u => u.Username == username && u.PasswordHash == password);
+            if (user == null)
             {
                 ViewBag.Error = "Tài khoản hoặc mật khẩu không chính xác!";
                 return View();
             }
 
-            // Kiểm tra xem user có vai trò không
-            if (user.ROLE == null || string.IsNullOrEmpty(user.ROLE.RoleName))
-            {
-                ViewBag.Error = "Tài khoản chưa được phân quyền!";
-                return View();
-            }
-
-            // Lưu thông tin vào Session
+            // Lưu vào session
             Session["UserID"] = user.UserID;
             Session["Username"] = user.Username;
             Session["Role"] = user.ROLE.RoleName;
 
-            // Chuyển hướng dựa trên vai trò (không phân biệt hoa thường)
-            switch (user.ROLE.RoleName.ToLower())
+            // Nếu là học sinh, tìm StudentID
+            if (user.ROLE.RoleName.ToLower() == "student")
+            {
+                var student = db.STUDENTs.FirstOrDefault(s => s.Email == user.Email);
+                if (student != null)
+                {
+                    Session["StudentID"] = student.StudentID;
+                }
+                else
+                {
+                    ViewBag.Error = "Lỗi! Tài khoản này chưa được liên kết với học sinh nào.";
+                    return View("Login");
+                }
+            }
+
+
+            if (user.ROLE.RoleName.ToLower() == "teacher")
+            {
+                var teacher = db.TEACHERs.FirstOrDefault(t => t.Email == user.Email);
+                if (teacher != null)
+                {
+                    Session["TeacherID"] = teacher.TeacherID;
+                }
+                else
+                {
+                    ViewBag.Error = "Lỗi! Tài khoản này chưa được liên kết với giáo viên nào.";
+                    return View("Login");
+                }
+            }
+
+            return RedirectToRoleDashboard(user.ROLE.RoleName);
+        }
+
+        private ActionResult RedirectToRoleDashboard(string roleName)
+        {
+            switch (roleName.ToLower())
             {
                 case "admin":
                     return RedirectToAction("Dashboard", "Admin");
                 case "teacher":
-                    return RedirectToAction("Dashboard", "Teacher");
+                    return RedirectToAction("Index", "TEACHERs");
                 case "student":
-                    return RedirectToAction("Dashboard", "Student");
+                    return RedirectToAction("Index", "STUDENTs");
                 default:
                     return RedirectToAction("Index", "Home");
             }
         }
 
-        // Đăng xuất
         public ActionResult Logout()
         {
             Session.Clear();
@@ -72,3 +95,5 @@ namespace QuanLyTrungTamNN.Controllers
         }
     }
 }
+
+

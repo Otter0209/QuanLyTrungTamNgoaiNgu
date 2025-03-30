@@ -1,0 +1,46 @@
+﻿@model IEnumerable<QuanLyTrungTamNN.Models.CLASS>
+@{
+    ViewBag.Title = "Danh sách lớp học của tôi";
+}
+
+<div class="container mt-4">
+    <div class="card shadow-lg border-0">
+        <div class="card-header bg-primary text-white text-center">
+            <h3 class="mb-0"><i class="fas fa-chalkboard-teacher"></i> Danh sách lớp học của tôi</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-bordered table-hover text-center">
+                <thead class="bg-secondary text-white">
+                    <tr>
+                        <th>Mã lớp</th>
+                        <th>Tên lớp</th>
+                        <th>Lịch học</th>
+                        <th>Địa điểm</th>
+                        <th>Thời gian</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var cls in Model)
+                    {
+                        <tr class="align-middle">
+                            <td>@cls.ClassID</td>
+                            <td>@cls.ClassName</td>
+                            <td>@cls.Schedule</td>
+                            <td>@cls.Location</td>
+                            <td>@cls.ClassTime</td>
+                            <td>
+                                <a href="@Url.Action("StudentList", "CLASSes", new { id = cls.ClassID })" class="btn btn-success btn-sm">
+                                    <i class="fas fa-users"></i> Xem học viên
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="card-footer text-center">
+            @Html.ActionLink("⬅️ Quay lại", "Index", "TEACHERs", null, new { @class = "btn btn-secondary" })
+        </div>
+    </div>
+</div>

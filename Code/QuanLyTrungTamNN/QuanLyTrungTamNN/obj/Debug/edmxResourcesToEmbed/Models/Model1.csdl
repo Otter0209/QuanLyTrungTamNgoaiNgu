@@ -10,18 +10,6 @@
     <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="ENROLLMENT" Relationship="Self.FK_Attendance_Enrollment" FromRole="ATTENDANCE" ToRole="ENROLLMENT" />
   </EntityType>
-  <EntityType Name="CLASS">
-    <Key>
-      <PropertyRef Name="ClassID" />
-    </Key>
-    <Property Name="ClassID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="ClassName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Schedule" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="Location" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="TeacherID" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="TEACHER" Relationship="Self.FK_Class_Teacher" FromRole="CLASS" ToRole="TEACHER" />
-    <NavigationProperty Name="ENROLLMENTs" Relationship="Self.FK_Enrollment_Class" FromRole="CLASS" ToRole="ENROLLMENT" />
-  </EntityType>
   <EntityType Name="ENROLLMENT">
     <Key>
       <PropertyRef Name="EnrollmentID" />
@@ -31,9 +19,9 @@
     <Property Name="ClassID" Type="Int32" Nullable="false" />
     <Property Name="RegistrationDate" Type="DateTime" Nullable="false" Precision="0" />
     <NavigationProperty Name="ATTENDANCEs" Relationship="Self.FK_Attendance_Enrollment" FromRole="ENROLLMENT" ToRole="ATTENDANCE" />
-    <NavigationProperty Name="CLASS" Relationship="Self.FK_Enrollment_Class" FromRole="ENROLLMENT" ToRole="CLASS" />
     <NavigationProperty Name="STUDENT" Relationship="Self.FK_Enrollment_Student" FromRole="ENROLLMENT" ToRole="STUDENT" />
     <NavigationProperty Name="FEEDBACKs" Relationship="Self.FK_Feedback_Enrollment" FromRole="ENROLLMENT" ToRole="FEEDBACK" />
+    <NavigationProperty Name="CLASS" Relationship="TrungTamNgoaiNguModel.FK_Enrollment_Class" FromRole="ENROLLMENT" ToRole="CLASS" />
   </EntityType>
   <EntityType Name="FEEDBACK">
     <Key>
@@ -70,6 +58,7 @@
     <Property Name="ParentID" Type="Int32" />
     <NavigationProperty Name="ENROLLMENTs" Relationship="Self.FK_Enrollment_Student" FromRole="STUDENT" ToRole="ENROLLMENT" />
     <NavigationProperty Name="PARENT" Relationship="Self.FK_Student_Parent" FromRole="STUDENT" ToRole="PARENT" />
+    <Property Name="AttendanceStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="TEACHER">
     <Key>
@@ -80,8 +69,9 @@
     <Property Name="PhoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Expertise" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="CLASSes" Relationship="Self.FK_Class_Teacher" FromRole="TEACHER" ToRole="CLASS" />
     <NavigationProperty Name="FEEDBACKs" Relationship="Self.FK_Feedback_Teacher" FromRole="TEACHER" ToRole="FEEDBACK" />
+    <NavigationProperty Name="CLASSes" Relationship="TrungTamNgoaiNguModel.FK_Class_Teacher" FromRole="TEACHER" ToRole="CLASS" />
+    <NavigationProperty Name="BUOIHOCs" Relationship="TrungTamNgoaiNguModel.FK_BuoiHoc_Teacher" FromRole="TEACHER" ToRole="BUOIHOC" />
   </EntityType>
   <Association Name="FK_Attendance_Enrollment">
     <End Role="ENROLLMENT" Type="Self.ENROLLMENT" Multiplicity="1" />
@@ -92,30 +82,6 @@
       </Principal>
       <Dependent Role="ATTENDANCE">
         <PropertyRef Name="EnrollmentID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Class_Teacher">
-    <End Role="TEACHER" Type="Self.TEACHER" Multiplicity="1" />
-    <End Role="CLASS" Type="Self.CLASS" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="TEACHER">
-        <PropertyRef Name="TeacherID" />
-      </Principal>
-      <Dependent Role="CLASS">
-        <PropertyRef Name="TeacherID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Enrollment_Class">
-    <End Role="CLASS" Type="Self.CLASS" Multiplicity="1" />
-    <End Role="ENROLLMENT" Type="Self.ENROLLMENT" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="CLASS">
-        <PropertyRef Name="ClassID" />
-      </Principal>
-      <Dependent Role="ENROLLMENT">
-        <PropertyRef Name="ClassID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -169,7 +135,6 @@
   </Association>
   <EntityContainer Name="TrungTamNgoaiNguEntities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="ATTENDANCEs" EntityType="Self.ATTENDANCE" />
-    <EntitySet Name="CLASSes" EntityType="Self.CLASS" />
     <EntitySet Name="ENROLLMENTs" EntityType="Self.ENROLLMENT" />
     <EntitySet Name="FEEDBACKs" EntityType="Self.FEEDBACK" />
     <EntitySet Name="PARENTs" EntityType="Self.PARENT" />
@@ -178,14 +143,6 @@
     <AssociationSet Name="FK_Attendance_Enrollment" Association="Self.FK_Attendance_Enrollment">
       <End Role="ENROLLMENT" EntitySet="ENROLLMENTs" />
       <End Role="ATTENDANCE" EntitySet="ATTENDANCEs" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Class_Teacher" Association="Self.FK_Class_Teacher">
-      <End Role="TEACHER" EntitySet="TEACHERs" />
-      <End Role="CLASS" EntitySet="CLASSes" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Enrollment_Class" Association="Self.FK_Enrollment_Class">
-      <End Role="CLASS" EntitySet="CLASSes" />
-      <End Role="ENROLLMENT" EntitySet="ENROLLMENTs" />
     </AssociationSet>
     <AssociationSet Name="FK_Enrollment_Student" Association="Self.FK_Enrollment_Student">
       <End Role="STUDENT" EntitySet="STUDENTs" />
@@ -208,6 +165,24 @@
     <AssociationSet Name="FK_User_Role" Association="TrungTamNgoaiNguModel.FK_User_Role">
       <End Role="ROLE" EntitySet="ROLEs" />
       <End Role="USER" EntitySet="USERs" />
+    </AssociationSet>
+    <EntitySet Name="CLASSes" EntityType="TrungTamNgoaiNguModel.CLASS" />
+    <AssociationSet Name="FK_Class_Teacher" Association="TrungTamNgoaiNguModel.FK_Class_Teacher">
+      <End Role="TEACHER" EntitySet="TEACHERs" />
+      <End Role="CLASS" EntitySet="CLASSes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Enrollment_Class" Association="TrungTamNgoaiNguModel.FK_Enrollment_Class">
+      <End Role="CLASS" EntitySet="CLASSes" />
+      <End Role="ENROLLMENT" EntitySet="ENROLLMENTs" />
+    </AssociationSet>
+    <EntitySet Name="BUOIHOCs" EntityType="TrungTamNgoaiNguModel.BUOIHOC" />
+    <AssociationSet Name="FK_BuoiHoc_Class" Association="TrungTamNgoaiNguModel.FK_BuoiHoc_Class">
+      <End Role="CLASS" EntitySet="CLASSes" />
+      <End Role="BUOIHOC" EntitySet="BUOIHOCs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BuoiHoc_Teacher" Association="TrungTamNgoaiNguModel.FK_BuoiHoc_Teacher">
+      <End Role="TEACHER" EntitySet="TEACHERs" />
+      <End Role="BUOIHOC" EntitySet="BUOIHOCs" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="ROLE">
@@ -239,6 +214,82 @@
       </Principal>
       <Dependent Role="USER">
         <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CLASS">
+    <Key>
+      <PropertyRef Name="ClassID" />
+    </Key>
+    <Property Name="ClassID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClassName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Schedule" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Location" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TeacherID" Type="Int32" Nullable="false" />
+    <Property Name="ClassTime" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TEACHER" Relationship="TrungTamNgoaiNguModel.FK_Class_Teacher" FromRole="CLASS" ToRole="TEACHER" />
+    <NavigationProperty Name="ENROLLMENTs" Relationship="TrungTamNgoaiNguModel.FK_Enrollment_Class" FromRole="CLASS" ToRole="ENROLLMENT" />
+    <NavigationProperty Name="BUOIHOCs" Relationship="TrungTamNgoaiNguModel.FK_BuoiHoc_Class" FromRole="CLASS" ToRole="BUOIHOC" />
+  </EntityType>
+  <Association Name="FK_Class_Teacher">
+    <End Type="TrungTamNgoaiNguModel.TEACHER" Role="TEACHER" Multiplicity="1" />
+    <End Type="TrungTamNgoaiNguModel.CLASS" Role="CLASS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TEACHER">
+        <PropertyRef Name="TeacherID" />
+      </Principal>
+      <Dependent Role="CLASS">
+        <PropertyRef Name="TeacherID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Enrollment_Class">
+    <End Type="TrungTamNgoaiNguModel.CLASS" Role="CLASS" Multiplicity="1" />
+    <End Type="TrungTamNgoaiNguModel.ENROLLMENT" Role="ENROLLMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLASS">
+        <PropertyRef Name="ClassID" />
+      </Principal>
+      <Dependent Role="ENROLLMENT">
+        <PropertyRef Name="ClassID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="BUOIHOC">
+    <Key>
+      <PropertyRef Name="BuoiHocID" />
+    </Key>
+    <Property Name="BuoiHocID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenBuoiHoc" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PhongHoc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StartTime" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="EndTime" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="TeacherID" Type="Int32" Nullable="false" />
+    <Property Name="ClassID" Type="Int32" />
+    <NavigationProperty Name="CLASS" Relationship="TrungTamNgoaiNguModel.FK_BuoiHoc_Class" FromRole="BUOIHOC" ToRole="CLASS" />
+    <NavigationProperty Name="TEACHER" Relationship="TrungTamNgoaiNguModel.FK_BuoiHoc_Teacher" FromRole="BUOIHOC" ToRole="TEACHER" />
+  </EntityType>
+  <Association Name="FK_BuoiHoc_Class">
+    <End Type="TrungTamNgoaiNguModel.CLASS" Role="CLASS" Multiplicity="0..1" />
+    <End Type="TrungTamNgoaiNguModel.BUOIHOC" Role="BUOIHOC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLASS">
+        <PropertyRef Name="ClassID" />
+      </Principal>
+      <Dependent Role="BUOIHOC">
+        <PropertyRef Name="ClassID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BuoiHoc_Teacher">
+    <End Type="TrungTamNgoaiNguModel.TEACHER" Role="TEACHER" Multiplicity="1" />
+    <End Type="TrungTamNgoaiNguModel.BUOIHOC" Role="BUOIHOC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TEACHER">
+        <PropertyRef Name="TeacherID" />
+      </Principal>
+      <Dependent Role="BUOIHOC">
+        <PropertyRef Name="TeacherID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

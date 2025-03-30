@@ -1,46 +1,58 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\",
+  "WorkspaceRootPath": "C:\\Users\\ASUS\\Desktop\\Qu\u1EA3n L\u00FD Trung T\u00E2m Anh Ng\u1EEF\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|d:\\th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\quanlytrungtamngoaingu\\code\\quanlytrungtamnn\\quanlytrungtamnn\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|solutionrelative:quanlytrungtamnn\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|d:\\th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\quanlytrungtamngoaingu\\code\\quanlytrungtamnn\\quanlytrungtamnn\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|solutionrelative:quanlytrungtamnn\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|d:\\th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\quanlytrungtamngoaingu\\code\\quanlytrungtamnn\\quanlytrungtamnn\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|solutionrelative:quanlytrungtamnn\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\quanlytrungtamnn\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|C:\\Users\\ASUS\\Desktop\\Qu\u1EA3n L\u00FD Trung T\u00E2m Anh Ng\u1EEF\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\quanlytrungtamnn\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|solutionrelative:quanlytrungtamnn\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\quanlytrungtamnn\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|C:\\Users\\ASUS\\Desktop\\Qu\u1EA3n L\u00FD Trung T\u00E2m Anh Ng\u1EEF\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\quanlytrungtamnn\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|solutionrelative:quanlytrungtamnn\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\quanlytrungtamnn\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|solutionrelative:quanlytrungtamnn\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\quanlytrungtamnn\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|solutionrelative:quanlytrungtamnn\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\quanlytrungtamnn\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|solutionrelative:quanlytrungtamnn\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\quanlytrungtamnn\\controllers\\classescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|C:\\Users\\ASUS\\Desktop\\Qu\u1EA3n L\u00FD Trung T\u00E2m Anh Ng\u1EEF\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\quanlytrungtamnn\\controllers\\classescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|solutionrelative:quanlytrungtamnn\\controllers\\classescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\quanlytrungtamnn\\models\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "AbsoluteMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|C:\\Users\\ASUS\\Desktop\\Qu\u1EA3n L\u00FD Trung T\u00E2m Anh Ng\u1EEF\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\quanlytrungtamnn\\views\\classes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|solutionrelative:quanlytrungtamnn\\views\\classes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|c:\\users\\asus\\desktop\\qu\u1EA3n l\u00FD trung t\u00E2m anh ng\u1EEF\\quanlytrungtamngoaingu\\code\\quanlytrungtamnn\\quanlytrungtamnn\\views\\students\\enrolledclasses.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|solutionrelative:quanlytrungtamnn\\views\\students\\enrolledclasses.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|C:\\Users\\ASUS\\Desktop\\Qu\u1EA3n L\u00FD Trung T\u00E2m Anh Ng\u1EEF\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\quanlytrungtamnn\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|solutionrelative:quanlytrungtamnn\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|C:\\Users\\ASUS\\Desktop\\Qu\u1EA3n L\u00FD Trung T\u00E2m Anh Ng\u1EEF\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\quanlytrungtamnn\\models\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
       "RelativeMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|solutionrelative:quanlytrungtamnn\\models\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|c:\\users\\asus\\desktop\\qu\u1EA3n l\u00FD trung t\u00E2m anh ng\u1EEF\\quanlytrungtamngoaingu\\code\\quanlytrungtamnn\\quanlytrungtamnn\\models\\student_custom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|solutionrelative:quanlytrungtamnn\\models\\student_custom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|C:\\Users\\ASUS\\Desktop\\Qu\u1EA3n L\u00FD Trung T\u00E2m Anh Ng\u1EEF\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\quanlytrungtamnn\\views\\teachers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|solutionrelative:quanlytrungtamnn\\views\\teachers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|C:\\Users\\ASUS\\Desktop\\Qu\u1EA3n L\u00FD Trung T\u00E2m Anh Ng\u1EEF\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\quanlytrungtamnn\\views\\teachers\\markattendance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|solutionrelative:quanlytrungtamnn\\views\\teachers\\markattendance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|C:\\Users\\ASUS\\Desktop\\Qu\u1EA3n L\u00FD Trung T\u00E2m Anh Ng\u1EEF\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\quanlytrungtamnn\\views\\teachers\\mystudents.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|solutionrelative:quanlytrungtamnn\\views\\teachers\\mystudents.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|C:\\Users\\ASUS\\Desktop\\Qu\u1EA3n L\u00FD Trung T\u00E2m Anh Ng\u1EEF\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\quanlytrungtamnn\\views\\teachers\\attendance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|solutionrelative:quanlytrungtamnn\\views\\teachers\\attendance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|C:\\Users\\ASUS\\Desktop\\Qu\u1EA3n L\u00FD Trung T\u00E2m Anh Ng\u1EEF\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\quanlytrungtamnn\\controllers\\teacherscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5D77A1D-29C2-42AF-BC16-6E9F9E637328}|QuanLyTrungTamNN\\QuanLyTrungTamNN.csproj|solutionrelative:quanlytrungtamnn\\controllers\\teacherscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,129 +66,187 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "STUDENTsController.cs",
-              "DocumentMoniker": "D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Controllers\\STUDENTsController.cs",
-              "RelativeDocumentMoniker": "QuanLyTrungTamNN\\Controllers\\STUDENTsController.cs",
-              "ToolTip": "D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Controllers\\STUDENTsController.cs",
-              "RelativeToolTip": "QuanLyTrungTamNN\\Controllers\\STUDENTsController.cs",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAwwAYAAAABAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Qu\u1EA3n L\u00FD Trung T\u00E2m Anh Ng\u1EEF\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "QuanLyTrungTamNN\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Qu\u1EA3n L\u00FD Trung T\u00E2m Anh Ng\u1EEF\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "QuanLyTrungTamNN\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-30T04:59:13.513Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "TEACHERsController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Qu\u1EA3n L\u00FD Trung T\u00E2m Anh Ng\u1EEF\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Controllers\\TEACHERsController.cs",
+              "RelativeDocumentMoniker": "QuanLyTrungTamNN\\Controllers\\TEACHERsController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Qu\u1EA3n L\u00FD Trung T\u00E2m Anh Ng\u1EEF\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Controllers\\TEACHERsController.cs",
+              "RelativeToolTip": "QuanLyTrungTamNN\\Controllers\\TEACHERsController.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAcwJ4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T06:37:56.084Z",
+              "WhenOpened": "2025-03-30T05:50:35.875Z",
               "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DashBoard.cshtml",
-              "DocumentMoniker": "D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Views\\Admin\\DashBoard.cshtml",
-              "RelativeDocumentMoniker": "QuanLyTrungTamNN\\Views\\Admin\\DashBoard.cshtml",
-              "ToolTip": "D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Views\\Admin\\DashBoard.cshtml*",
-              "RelativeToolTip": "QuanLyTrungTamNN\\Views\\Admin\\DashBoard.cshtml*",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAmwCkAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "MyStudents.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Qu\u1EA3n L\u00FD Trung T\u00E2m Anh Ng\u1EEF\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Views\\TEACHERs\\MyStudents.cshtml",
+              "RelativeDocumentMoniker": "QuanLyTrungTamNN\\Views\\TEACHERs\\MyStudents.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Qu\u1EA3n L\u00FD Trung T\u00E2m Anh Ng\u1EEF\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Views\\TEACHERs\\MyStudents.cshtml",
+              "RelativeToolTip": "QuanLyTrungTamNN\\Views\\TEACHERs\\MyStudents.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-29T15:33:53.221Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-30T06:51:53.369Z",
+              "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "QuanLyTrungTamNN\\Controllers\\AdminController.cs",
-              "ToolTip": "D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "QuanLyTrungTamNN\\Controllers\\AdminController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAgAAAAAAAAAA==",
+              "Title": "CLASSesController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Qu\u1EA3n L\u00FD Trung T\u00E2m Anh Ng\u1EEF\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Controllers\\CLASSesController.cs",
+              "RelativeDocumentMoniker": "QuanLyTrungTamNN\\Controllers\\CLASSesController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Qu\u1EA3n L\u00FD Trung T\u00E2m Anh Ng\u1EEF\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Controllers\\CLASSesController.cs",
+              "RelativeToolTip": "QuanLyTrungTamNN\\Controllers\\CLASSesController.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAcwGwAAABaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T15:30:06.124Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "QuanLyTrungTamNN\\Views\\Account\\Login.cshtml",
-              "ToolTip": "D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "QuanLyTrungTamNN\\Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAA4AAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-29T15:13:18.204Z",
+              "WhenOpened": "2025-03-30T07:20:57.977Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "QuanLyTrungTamNN\\Controllers\\AccountController.cs",
-              "ToolTip": "D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Controllers\\AccountController.cs*",
-              "RelativeToolTip": "QuanLyTrungTamNN\\Controllers\\AccountController.cs*",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAuwEkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T15:12:35.848Z",
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Qu\u1EA3n L\u00FD Trung T\u00E2m Anh Ng\u1EEF\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "QuanLyTrungTamNN\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Qu\u1EA3n L\u00FD Trung T\u00E2m Anh Ng\u1EEF\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Views\\Shared\\_Layout.cshtml*",
+              "RelativeToolTip": "QuanLyTrungTamNN\\Views\\Shared\\_Layout.cshtml*",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAEcAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-30T06:56:52.504Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "QuanLyTrungTamNN\\Controllers\\HomeController.cs",
-              "ToolTip": "D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "QuanLyTrungTamNN\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T15:12:14.771Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CLASSesController.cs",
-              "DocumentMoniker": "D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Controllers\\CLASSesController.cs",
-              "RelativeDocumentMoniker": "QuanLyTrungTamNN\\Controllers\\CLASSesController.cs",
-              "ToolTip": "D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Controllers\\CLASSesController.cs",
-              "RelativeToolTip": "QuanLyTrungTamNN\\Controllers\\CLASSesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T15:12:11.851Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Model1.edmx [Diagram1]",
-              "DocumentMoniker": "D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Models\\Model1.edmx",
-              "RelativeDocumentMoniker": "QuanLyTrungTamNN\\Models\\Model1.edmx",
-              "ToolTip": "D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Models\\Model1.edmx [Diagram1]",
-              "RelativeToolTip": "QuanLyTrungTamNN\\Models\\Model1.edmx [Diagram1]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
-              "WhenOpened": "2025-03-29T15:10:01.892Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "QuanLyTrungTamNN\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "QuanLyTrungTamNN\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAACwAAAAAAAAAAAAmwFUAAAAAAAAAAAAAAA==",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Qu\u1EA3n L\u00FD Trung T\u00E2m Anh Ng\u1EEF\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Views\\CLASSes\\Index.cshtml",
+              "RelativeDocumentMoniker": "QuanLyTrungTamNN\\Views\\CLASSes\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Qu\u1EA3n L\u00FD Trung T\u00E2m Anh Ng\u1EEF\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Views\\CLASSes\\Index.cshtml",
+              "RelativeToolTip": "QuanLyTrungTamNN\\Views\\CLASSes\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-29T15:08:44.216Z",
+              "WhenOpened": "2025-03-30T07:17:13.247Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EnrolledClasses.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Qu\u1EA3n L\u00FD Trung T\u00E2m Anh Ng\u1EEF\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Views\\STUDENTs\\EnrolledClasses.cshtml",
+              "RelativeDocumentMoniker": "QuanLyTrungTamNN\\Views\\STUDENTs\\EnrolledClasses.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Qu\u1EA3n L\u00FD Trung T\u00E2m Anh Ng\u1EEF\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Views\\STUDENTs\\EnrolledClasses.cshtml",
+              "RelativeToolTip": "QuanLyTrungTamNN\\Views\\STUDENTs\\EnrolledClasses.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-30T09:05:58.95Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Web.config",
-              "DocumentMoniker": "D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Web.config",
-              "RelativeDocumentMoniker": "QuanLyTrungTamNN\\Web.config",
-              "ToolTip": "D:\\Th\u01B0 mu\u0323c m\u01A1\u0301i (2)\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Web.config",
-              "RelativeToolTip": "QuanLyTrungTamNN\\Web.config",
-              "ViewState": "AgIAADMAAAAAAAAAAAAvwD4AAAD1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-03-29T04:02:20.613Z",
+              "Title": "STUDENTsController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Qu\u1EA3n L\u00FD Trung T\u00E2m Anh Ng\u1EEF\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Controllers\\STUDENTsController.cs",
+              "RelativeDocumentMoniker": "QuanLyTrungTamNN\\Controllers\\STUDENTsController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Qu\u1EA3n L\u00FD Trung T\u00E2m Anh Ng\u1EEF\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Controllers\\STUDENTsController.cs",
+              "RelativeToolTip": "QuanLyTrungTamNN\\Controllers\\STUDENTsController.cs",
+              "ViewState": "AgIAAJAAAAAAAAAAAAASwMEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-30T06:58:10.5Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "STUDENT_Custom.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Qu\u1EA3n L\u00FD Trung T\u00E2m Anh Ng\u1EEF\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Models\\STUDENT_Custom.cs",
+              "RelativeDocumentMoniker": "QuanLyTrungTamNN\\Models\\STUDENT_Custom.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Qu\u1EA3n L\u00FD Trung T\u00E2m Anh Ng\u1EEF\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Models\\STUDENT_Custom.cs",
+              "RelativeToolTip": "QuanLyTrungTamNN\\Models\\STUDENT_Custom.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-30T08:40:11.891Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Model1.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Qu\u1EA3n L\u00FD Trung T\u00E2m Anh Ng\u1EEF\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Models\\Model1.edmx",
+              "RelativeDocumentMoniker": "QuanLyTrungTamNN\\Models\\Model1.edmx",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Qu\u1EA3n L\u00FD Trung T\u00E2m Anh Ng\u1EEF\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Models\\Model1.edmx [Diagram1]",
+              "RelativeToolTip": "QuanLyTrungTamNN\\Models\\Model1.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2025-03-30T03:10:18.272Z",
+              "EditorCaption": " [Diagram1]"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Qu\u1EA3n L\u00FD Trung T\u00E2m Anh Ng\u1EEF\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Views\\TEACHERs\\Index.cshtml",
+              "RelativeDocumentMoniker": "QuanLyTrungTamNN\\Views\\TEACHERs\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Qu\u1EA3n L\u00FD Trung T\u00E2m Anh Ng\u1EEF\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Views\\TEACHERs\\Index.cshtml",
+              "RelativeToolTip": "QuanLyTrungTamNN\\Views\\TEACHERs\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-30T07:38:47.122Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MarkAttendance.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Qu\u1EA3n L\u00FD Trung T\u00E2m Anh Ng\u1EEF\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Views\\TEACHERs\\MarkAttendance.cshtml",
+              "RelativeDocumentMoniker": "QuanLyTrungTamNN\\Views\\TEACHERs\\MarkAttendance.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Qu\u1EA3n L\u00FD Trung T\u00E2m Anh Ng\u1EEF\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Views\\TEACHERs\\MarkAttendance.cshtml",
+              "RelativeToolTip": "QuanLyTrungTamNN\\Views\\TEACHERs\\MarkAttendance.cshtml",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAAE0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-30T06:28:59.826Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Attendance.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Qu\u1EA3n L\u00FD Trung T\u00E2m Anh Ng\u1EEF\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Views\\TEACHERs\\Attendance.cshtml",
+              "RelativeDocumentMoniker": "QuanLyTrungTamNN\\Views\\TEACHERs\\Attendance.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Qu\u1EA3n L\u00FD Trung T\u00E2m Anh Ng\u1EEF\\QuanLyTrungTamNgoaiNgu\\Code\\QuanLyTrungTamNN\\QuanLyTrungTamNN\\Views\\TEACHERs\\Attendance.cshtml",
+              "RelativeToolTip": "QuanLyTrungTamNN\\Views\\TEACHERs\\Attendance.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-30T07:02:45.273Z"
             }
           ]
         }
