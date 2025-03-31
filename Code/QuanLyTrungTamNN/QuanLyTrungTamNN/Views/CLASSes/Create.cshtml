@@ -1,20 +1,18 @@
 ﻿@model QuanLyTrungTamNN.Models.CLASS
-
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Thêm mới Lớp học";
 }
+<h2>Thêm mới Lớp học</h2>
 
-<h2>Create</h2>
-
-
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
     <div class="form-horizontal">
-        <h4>CLASS</h4>
+        <h4>Lớp học</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <!-- Tên lớp -->
         <div class="form-group">
             @Html.LabelFor(model => model.ClassName, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -23,6 +21,7 @@
             </div>
         </div>
 
+        <!-- Lịch học -->
         <div class="form-group">
             @Html.LabelFor(model => model.Schedule, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -31,6 +30,7 @@
             </div>
         </div>
 
+        <!-- Địa điểm -->
         <div class="form-group">
             @Html.LabelFor(model => model.Location, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -39,26 +39,30 @@
             </div>
         </div>
 
+        <!-- Giáo viên chủ nhiệm -->
         <div class="form-group">
-            @Html.LabelFor(model => model.TeacherID, "TeacherID", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.TeacherID, "Giáo viên chủ nhiệm", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("TeacherID", null, htmlAttributes: new { @class = "form-control" })
+                @Html.DropDownList("TeacherID", null, "-- Chọn giáo viên --", new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.TeacherID, "", new { @class = "text-danger" })
             </div>
         </div>
 
+        <!-- Thời gian lớp học -->
+        <div class="form-group">
+            @Html.LabelFor(model => model.ClassTime, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ClassTime, new { htmlAttributes = new { @class = "form-control", placeholder = "HH:mm" } })
+                @Html.ValidationMessageFor(model => model.ClassTime, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <!-- Nút submit -->
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Thêm mới" class="btn btn-primary" />
+                @Html.ActionLink("Quay lại", "Index", null, new { @class = "btn btn-default" })
             </div>
         </div>
     </div>
-}
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
 }

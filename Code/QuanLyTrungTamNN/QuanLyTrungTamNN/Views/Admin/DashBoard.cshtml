@@ -1,6 +1,6 @@
 ﻿@{
     ViewBag.Title = "Dashboard - Admin";
-    Layout = "~/Views/Shared/_Layout.cshtml"; <!-- Đảm bảo dùng Layout chung -->
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="container mt-4">
@@ -12,8 +12,8 @@
             <div class="card text-white bg-primary mb-3">
                 <div class="card-header">Học Viên</div>
                 <div class="card-body">
-                    <h5 class="card-title">@ViewBag.StudentCount học viên</h5>
-                    <a href="@Url.Action("Index", "Students")" class="btn btn-light">Quản lý</a>
+
+                    <a href="@Url.Action("Index", "STUDENTs")" class="btn btn-light">Quản lý</a>
                 </div>
             </div>
         </div>
@@ -22,8 +22,8 @@
             <div class="card text-white bg-success mb-3">
                 <div class="card-header">Giáo Viên</div>
                 <div class="card-body">
-                    <h5 class="card-title">@ViewBag.TeacherCount giáo viên</h5>
-                    <a href="@Url.Action("Index", "Teachers")" class="btn btn-light">Quản lý</a>
+
+                    <a href="@Url.Action("Index", "TEACHERs")" class="btn btn-light">Quản lý</a>
                 </div>
             </div>
         </div>
@@ -32,8 +32,8 @@
             <div class="card text-white bg-warning mb-3">
                 <div class="card-header">Lớp Học</div>
                 <div class="card-body">
-                    <h5 class="card-title">@ViewBag.ClassCount lớp học</h5>
-                    <a href="@Url.Action("Index", "Classes")" class="btn btn-light">Quản lý</a>
+
+                    <a href="@Url.Action("Index", "CLASSes")" class="btn btn-light">Quản lý</a>
                 </div>
             </div>
         </div>

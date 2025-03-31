@@ -28,9 +28,9 @@ namespace QuanLyTrungTamNN.Models
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ATTENDANCE> ATTENDANCEs { get; set; }
-        public virtual CLASS CLASS { get; set; }
         public virtual STUDENT STUDENT { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<FEEDBACK> FEEDBACKs { get; set; }
+        public virtual CLASS CLASS { get; set; }
     }
 }

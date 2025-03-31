@@ -1,50 +1,40 @@
 ﻿@model QuanLyTrungTamNN.Models.TEACHER
-
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Chi tiết Giáo viên";
 }
 
-<h2>Details</h2>
-
-<div>
-    <h4>TEACHER</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.FullName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.FullName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PhoneNumber)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PhoneNumber)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Expertise)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Expertise)
-        </dd>
-
-    </dl>
+<div class="container mt-4">
+    <div class="card shadow-lg border-0">
+        <div class="card-header bg-info text-white text-center">
+            <h3 class="mb-0"><i class="fa fa-user-graduate"></i> Chi tiết Giáo viên</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-bordered">
+                <tr>
+                    <th>Mã GV</th>
+                    <td>@Model.TeacherID</td>
+                </tr>
+                <tr>
+                    <th>Họ và tên</th>
+                    <td>@Model.FullName</td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td>@Model.Email</td>
+                </tr>
+                <tr>
+                    <th>Số điện thoại</th>
+                    <td>@Model.PhoneNumber</td>
+                </tr>
+                <tr>
+                    <th>Chuyên môn</th>
+                    <td>@Model.Expertise</td>
+                </tr>
+            </table>
+        </div>
+        <div class="card-footer text-center">
+            @Html.ActionLink("✏️ Sửa", "Edit", new { id = Model.TeacherID }, new { @class = "btn btn-warning mx-2" })
+            @Html.ActionLink("⬅️ Quay lại", "Index", null, new { @class = "btn btn-secondary mx-2" })
+        </div>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.TeacherID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

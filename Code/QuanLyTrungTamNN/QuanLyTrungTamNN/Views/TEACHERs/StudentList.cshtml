@@ -1,0 +1,55 @@
+﻿@model IEnumerable<QuanLyTrungTamNN.Models.CLASS>
+
+@{
+    ViewBag.Title = "Danh sách học viên của tôi";
+}
+
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Danh sách học viên của tôi</h2>
+    @foreach (var cls in Model)
+    {
+        <div class="card shadow-lg mb-4">
+            <div class="card-header bg-secondary text-white">
+                <h4 class="mb-0">Lớp: @cls.ClassName</h4>
+            </div>
+            <div class="card-body">
+                <p><strong>Lịch học:</strong> @cls.Schedule | <strong>Địa điểm:</strong> @cls.Location | <strong>Thời gian:</strong> @cls.ClassTime</p>
+                <hr />
+                <h5 class="text-center">Danh sách học viên</h5>
+                <table class="table table-bordered table-hover text-center">
+                    <thead class="bg-primary text-white">
+                        <tr>
+                            <th>Mã học viên</th>
+                            <th>Họ và tên</th>
+                            <th>Email</th>
+                            <th>Số điện thoại</th>
+                            <th>Ngày sinh</th>
+                            <th>Địa chỉ</th>
+                            <th>Phụ huynh</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var enrollment in cls.ENROLLMENTs)
+                        {
+                            var student = enrollment.STUDENT;
+                            <tr class="align-middle">
+                                <td>@student.StudentID</td>
+                                <td>@student.FullName</td>
+                                <td>@student.Email</td>
+                                <td>@student.PhoneNumber</td>
+                                <td>@(student.DateOfBirth.HasValue ? student.DateOfBirth.Value.ToString("dd/MM/yyyy") : "N/A")</td>
+                                <td>@student.Address</td>
+                                <td>@(student.PARENT != null ? student.PARENT.FullName : "Không có")</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    }
+    <div class="text-center">
+        <a href="@Url.Action("Index", "TEACHERs")" class="btn btn-secondary">
+            <i class="fas fa-arrow-left"></i> Quay lại
+        </a>
+    </div>
+</div>

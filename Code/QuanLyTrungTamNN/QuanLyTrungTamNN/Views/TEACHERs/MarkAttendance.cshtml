@@ -1,0 +1,77 @@
+﻿@model QuanLyTrungTamNN.Models.CLASS
+
+@{
+    ViewBag.Title = "Điểm danh lớp " + Model.ClassName;
+}
+
+<div class="container mt-4">
+    <div class="card shadow-lg">
+        <div class="card-header bg-success text-white text-center">
+            <h3 class="mb-0">Điểm danh - @Model.ClassName</h3>
+        </div>
+        <div class="card-body">
+            <p><strong>Lịch học:</strong> @Model.Schedule</p>
+            <p><strong>Địa điểm:</strong> @Model.Location</p>
+            <p><strong>Thời gian:</strong> @Model.ClassTime</p>
+            <hr />
+            <h4 class="text-center">Danh sách học viên</h4>
+            <table class="table table-bordered text-center">
+                <thead class="bg-primary text-white">
+                    <tr>
+                        <th>Mã học viên</th>
+                        <th>Họ và tên</th>
+                        <th>Trạng thái điểm danh</th>
+                        <th>Điểm danh</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var enrollment in Model.ENROLLMENTs)
+                    {
+                        var student = enrollment.STUDENT;
+                        <tr class="align-middle">
+                            <td>@student.StudentID</td>
+                            <td>@student.FullName</td>
+                            <td id="status-@student.StudentID">
+                                @(string.IsNullOrEmpty(student.AttendanceStatus) ? "Chưa điểm danh" : student.AttendanceStatus)
+                            </td>
+                            <td>
+                                <button class="btn btn-success btn-sm" onclick="markAttendance(@student.StudentID, 'Present')">
+                                    ✅
+                                </button>
+                                <button class="btn btn-danger btn-sm" onclick="markAttendance(@student.StudentID, 'Absent')">
+                                    ❌
+                                </button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="card-footer text-center">
+            <a href="@Url.Action("Attendance", "TEACHERs")" class="btn btn-secondary">
+                <i class="fas fa-arrow-left"></i> Quay lại
+            </a>
+        </div>
+    </div>
+</div>
+
+<script>
+    function markAttendance(studentId, status) {
+        console.log("Marking student " + studentId + " as " + status);
+        $.ajax({
+            url: '@Url.Action("UpdateAttendance", "CLASSes")',
+            type: 'POST',
+            data: { studentId: studentId, status: status },
+            success: function (response) {
+                if (response.success) {
+                    $("#status-" + studentId).text(status === "Present" ? "✅ Có mặt" : "❌ Vắng");
+                } else {
+                    alert(response.message);
+                }
+            },
+            error: function () {
+                alert("Lỗi khi cập nhật điểm danh!");
+            }
+        });
+    }
+</script>

@@ -26,7 +26,6 @@ namespace QuanLyTrungTamNN.Models
         }
     
         public virtual DbSet<ATTENDANCE> ATTENDANCEs { get; set; }
-        public virtual DbSet<CLASS> CLASSes { get; set; }
         public virtual DbSet<ENROLLMENT> ENROLLMENTs { get; set; }
         public virtual DbSet<FEEDBACK> FEEDBACKs { get; set; }
         public virtual DbSet<PARENT> PARENTs { get; set; }
@@ -34,5 +33,7 @@ namespace QuanLyTrungTamNN.Models
         public virtual DbSet<TEACHER> TEACHERs { get; set; }
         public virtual DbSet<ROLE> ROLEs { get; set; }
         public virtual DbSet<USER> USERs { get; set; }
+        public virtual DbSet<CLASS> CLASSes { get; set; }
+        public virtual DbSet<BUOIHOC> BUOIHOCs { get; set; }
     }
 }

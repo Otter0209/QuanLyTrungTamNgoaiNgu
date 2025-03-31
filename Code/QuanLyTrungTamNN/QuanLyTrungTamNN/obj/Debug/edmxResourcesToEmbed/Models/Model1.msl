@@ -11,17 +11,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="CLASSes">
-      <EntityTypeMapping TypeName="TrungTamNgoaiNguModel.CLASS">
-        <MappingFragment StoreEntitySet="CLASS">
-          <ScalarProperty Name="ClassID" ColumnName="ClassID" />
-          <ScalarProperty Name="ClassName" ColumnName="ClassName" />
-          <ScalarProperty Name="Schedule" ColumnName="Schedule" />
-          <ScalarProperty Name="Location" ColumnName="Location" />
-          <ScalarProperty Name="TeacherID" ColumnName="TeacherID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="ENROLLMENTs">
       <EntityTypeMapping TypeName="TrungTamNgoaiNguModel.ENROLLMENT">
         <MappingFragment StoreEntitySet="ENROLLMENT">
@@ -56,6 +45,7 @@
     <EntitySetMapping Name="STUDENTs">
       <EntityTypeMapping TypeName="TrungTamNgoaiNguModel.STUDENT">
         <MappingFragment StoreEntitySet="STUDENT">
+          <ScalarProperty Name="AttendanceStatus" ColumnName="AttendanceStatus" />
           <ScalarProperty Name="StudentID" ColumnName="StudentID" />
           <ScalarProperty Name="FullName" ColumnName="FullName" />
           <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
@@ -94,6 +84,31 @@
           <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
           <ScalarProperty Name="Username" ColumnName="Username" />
           <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLASSes">
+      <EntityTypeMapping TypeName="TrungTamNgoaiNguModel.CLASS">
+        <MappingFragment StoreEntitySet="CLASS">
+          <ScalarProperty Name="ClassTime" ColumnName="ClassTime" />
+          <ScalarProperty Name="TeacherID" ColumnName="TeacherID" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Schedule" ColumnName="Schedule" />
+          <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+          <ScalarProperty Name="ClassID" ColumnName="ClassID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BUOIHOCs">
+      <EntityTypeMapping TypeName="TrungTamNgoaiNguModel.BUOIHOC">
+        <MappingFragment StoreEntitySet="BUOIHOC">
+          <ScalarProperty Name="ClassID" ColumnName="ClassID" />
+          <ScalarProperty Name="TeacherID" ColumnName="TeacherID" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="PhongHoc" ColumnName="PhongHoc" />
+          <ScalarProperty Name="TenBuoiHoc" ColumnName="TenBuoiHoc" />
+          <ScalarProperty Name="BuoiHocID" ColumnName="BuoiHocID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

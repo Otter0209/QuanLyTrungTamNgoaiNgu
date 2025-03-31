@@ -1,50 +1,39 @@
 ﻿@model QuanLyTrungTamNN.Models.CLASS
-
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Chi tiết Lớp học";
 }
 
-<h2>Details</h2>
+<div class="container">
+    <h2 class="text-center">Chi tiết Lớp học</h2>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">@Model.ClassName</h3>
+        </div>
+        <div class="panel-body">
+            <dl class="dl-horizontal">
+                <dt>Mã lớp</dt>
+                <dd>@Model.ClassID</dd>
 
-<div>
-    <h4>CLASS</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.ClassName)
-        </dt>
+                <dt>Tên lớp</dt>
+                <dd>@Model.ClassName</dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.ClassName)
-        </dd>
+                <dt>Lịch học</dt>
+                <dd>@Model.Schedule</dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Schedule)
-        </dt>
+                <dt>Địa điểm</dt>
+                <dd>@Model.Location</dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Schedule)
-        </dd>
+                <dt>Giáo viên chủ nhiệm</dt>
+                <dd>@(Model.TEACHER != null ? Model.TEACHER.FullName : "")</dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Location)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Location)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.TEACHER.FullName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TEACHER.FullName)
-        </dd>
-
-    </dl>
+                <dt>Thời gian lớp học</dt>
+                <dd>@Model.ClassTime</dd>
+            </dl>
+        </div>
+    </div>
+    <div class="text-center">
+        @Html.ActionLink("Sửa", "Edit", new { id = Model.ClassID }, new { @class = "btn btn-warning" })
+        @Html.Raw(" ")
+        @Html.ActionLink("Quay lại", "Index", null, new { @class = "btn btn-default" })
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ClassID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

@@ -1,51 +1,46 @@
 ﻿@model IEnumerable<QuanLyTrungTamNN.Models.TEACHER>
-
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Danh sách Giáo viên";
 }
 
-<h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.FullName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PhoneNumber)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Email)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Expertise)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.FullName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PhoneNumber)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Expertise)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.TeacherID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.TeacherID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.TeacherID })
-        </td>
-    </tr>
-}
-
-</table>
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Danh sách Giáo viên</h2>
+    <div class="text-end mb-3">
+        @Html.ActionLink("➕ Thêm mới", "Create", null, new { @class = "btn btn-success" })
+    </div>
+    <table class="table table-bordered table-hover text-center shadow-sm">
+        <thead class="bg-primary text-white">
+            <tr>
+                <th>Mã GV</th>
+                <th>Họ và tên</th>
+                <th>Email</th>
+                <th>Số điện thoại</th>
+                <th>Chuyên môn</th>
+                <th>Hành động</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr class="align-middle">
+                    <td>@item.TeacherID</td>
+                    <td>@item.FullName</td>
+                    <td>@item.Email</td>
+                    <td>@item.PhoneNumber</td>
+                    <td>@item.Expertise</td>
+                    <td>
+                        <a href="@Url.Action("Details", new { id = item.TeacherID })" class="btn btn-info btn-sm">
+                            <i class="fa fa-eye"></i>
+                        </a>
+                        <a href="@Url.Action("Edit", new { id = item.TeacherID })" class="btn btn-warning btn-sm">
+                            <i class="fa fa-edit"></i>
+                        </a>
+                        <a href="@Url.Action("Delete", new { id = item.TeacherID })" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc chắn muốn xóa không?');">
+                            <i class="fa fa-trash"></i>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,18 +1,74 @@
-﻿create database TrungTamNgoaiNgu
-go
+﻿--------------------------------------------------
+-- 1. Tạo database (nếu chưa tồn tại)
+--------------------------------------------------
+IF DB_ID('TrungTamNgoaiNgu') IS NULL
+BEGIN
+    CREATE DATABASE TrungTamNgoaiNgu;
+END
+GO
 
-use TrungTamNgoaiNgu
-go
+USE TrungTamNgoaiNgu;
+GO
 
--- Tạo bảng PARENT
+--------------------------------------------------
+-- 2. Xóa các bảng cũ theo thứ tự phụ thuộc (DROP từ bảng con đến bảng cha)
+--------------------------------------------------
+IF OBJECT_ID('dbo.FEEDBACK', 'U') IS NOT NULL DROP TABLE dbo.FEEDBACK;
+GO
+IF OBJECT_ID('dbo.ATTENDANCE', 'U') IS NOT NULL DROP TABLE dbo.ATTENDANCE;
+GO
+IF OBJECT_ID('dbo.ENROLLMENT', 'U') IS NOT NULL DROP TABLE dbo.ENROLLMENT;
+GO
+IF OBJECT_ID('dbo.STUDENT', 'U') IS NOT NULL DROP TABLE dbo.STUDENT;
+GO
+IF OBJECT_ID('dbo.PARENT', 'U') IS NOT NULL DROP TABLE dbo.PARENT;
+GO
+IF OBJECT_ID('dbo.CLASS', 'U') IS NOT NULL DROP TABLE dbo.CLASS;
+GO
+IF OBJECT_ID('dbo.TEACHER', 'U') IS NOT NULL DROP TABLE dbo.TEACHER;
+GO
+IF OBJECT_ID('dbo.[USER]', 'U') IS NOT NULL DROP TABLE dbo.[USER];
+GO
+IF OBJECT_ID('dbo.ROLE', 'U') IS NOT NULL DROP TABLE dbo.ROLE;
+GO
+
+--------------------------------------------------
+-- 3. Tạo bảng ROLE
+--------------------------------------------------
+CREATE TABLE ROLE (
+    RoleID INT IDENTITY(1,1) PRIMARY KEY,
+    RoleName NVARCHAR(50) NOT NULL UNIQUE
+);
+GO
+
+--------------------------------------------------
+-- 4. Tạo bảng [USER]
+--------------------------------------------------
+CREATE TABLE [USER] (
+    UserID INT IDENTITY(1,1) PRIMARY KEY,
+    Username NVARCHAR(100) NOT NULL UNIQUE,
+    PasswordHash NVARCHAR(255) NOT NULL,
+    FullName NVARCHAR(100),
+    Email NVARCHAR(100),
+    RoleID INT NOT NULL,
+    CONSTRAINT FK_User_Role FOREIGN KEY (RoleID) REFERENCES ROLE(RoleID)
+);
+GO
+
+--------------------------------------------------
+-- 5. Tạo bảng PARENT
+--------------------------------------------------
 CREATE TABLE PARENT (
     ParentID INT IDENTITY(1,1) PRIMARY KEY,
     FullName NVARCHAR(100) NOT NULL,
     PhoneNumber NVARCHAR(20),
     Email NVARCHAR(100)
 );
+GO
 
--- Tạo bảng STUDENT
+--------------------------------------------------
+-- 6. Tạo bảng STUDENT
+--------------------------------------------------
 CREATE TABLE STUDENT (
     StudentID INT IDENTITY(1,1) PRIMARY KEY,
     FullName NVARCHAR(100) NOT NULL,
@@ -24,8 +80,11 @@ CREATE TABLE STUDENT (
     CONSTRAINT FK_Student_Parent FOREIGN KEY (ParentID)
         REFERENCES PARENT(ParentID)
 );
+GO
 
--- Tạo bảng TEACHER
+--------------------------------------------------
+-- 7. Tạo bảng TEACHER
+--------------------------------------------------
 CREATE TABLE TEACHER (
     TeacherID INT IDENTITY(1,1) PRIMARY KEY,
     FullName NVARCHAR(100) NOT NULL,
@@ -33,41 +92,54 @@ CREATE TABLE TEACHER (
     Email NVARCHAR(100),
     Expertise NVARCHAR(100)
 );
+GO
 
--- Tạo bảng CLASS
+--------------------------------------------------
+-- 8. Tạo bảng CLASS
+--------------------------------------------------
 CREATE TABLE CLASS (
     ClassID INT IDENTITY(1,1) PRIMARY KEY,
     ClassName NVARCHAR(100) NOT NULL,
     Schedule NVARCHAR(100),
     Location NVARCHAR(100),
     TeacherID INT NOT NULL,
+    ClassTime NVARCHAR(50) NOT NULL CONSTRAINT DF_CLASS_ClassTime DEFAULT (N'00:00'),
     CONSTRAINT FK_Class_Teacher FOREIGN KEY (TeacherID)
         REFERENCES TEACHER(TeacherID)
 );
+GO
 
--- Tạo bảng ENROLLMENT
+--------------------------------------------------
+-- 9. Tạo bảng ENROLLMENT
+--------------------------------------------------
 CREATE TABLE ENROLLMENT (
     EnrollmentID INT IDENTITY(1,1) PRIMARY KEY,
     StudentID INT NOT NULL,
     ClassID INT NOT NULL,
     RegistrationDate DATE NOT NULL,
     CONSTRAINT FK_Enrollment_Student FOREIGN KEY (StudentID)
-        REFERENCES STUDENT(StudentID),
+        REFERENCES STUDENT(StudentID) ON DELETE CASCADE,
     CONSTRAINT FK_Enrollment_Class FOREIGN KEY (ClassID)
         REFERENCES CLASS(ClassID)
 );
+GO
 
--- Tạo bảng ATTENDANCE
+--------------------------------------------------
+-- 10. Tạo bảng ATTENDANCE
+--------------------------------------------------
 CREATE TABLE ATTENDANCE (
     AttendanceID INT IDENTITY(1,1) PRIMARY KEY,
     EnrollmentID INT NOT NULL,
     Date DATE NOT NULL,
     Status NVARCHAR(50),
     CONSTRAINT FK_Attendance_Enrollment FOREIGN KEY (EnrollmentID)
-        REFERENCES ENROLLMENT(EnrollmentID)
+        REFERENCES ENROLLMENT(EnrollmentID) ON DELETE CASCADE
 );
+GO
 
--- Tạo bảng FEEDBACK
+--------------------------------------------------
+-- 11. Tạo bảng FEEDBACK
+--------------------------------------------------
 CREATE TABLE FEEDBACK (
     FeedbackID INT IDENTITY(1,1) PRIMARY KEY,
     EnrollmentID INT NOT NULL,
@@ -75,44 +147,165 @@ CREATE TABLE FEEDBACK (
     Comments NVARCHAR(MAX),
     Date DATE NOT NULL,
     CONSTRAINT FK_Feedback_Enrollment FOREIGN KEY (EnrollmentID)
-        REFERENCES ENROLLMENT(EnrollmentID),
+        REFERENCES ENROLLMENT(EnrollmentID) ON DELETE CASCADE,
     CONSTRAINT FK_Feedback_Teacher FOREIGN KEY (TeacherID)
         REFERENCES TEACHER(TeacherID)
 );
--- Tạo bảng ROLE
-CREATE TABLE ROLE (
-    RoleID INT IDENTITY(1,1) PRIMARY KEY,
-    RoleName NVARCHAR(50) NOT NULL UNIQUE
-);
+GO
 
--- Tạo bảng USER
-CREATE TABLE [USER] (
-    UserID INT IDENTITY(1,1) PRIMARY KEY,
-    Username NVARCHAR(100) NOT NULL UNIQUE,
-    PasswordHash NVARCHAR(255) NOT NULL,
-    FullName NVARCHAR(100),
-    Email NVARCHAR(100),
-    RoleID INT NOT NULL,
-    CONSTRAINT FK_User_Role FOREIGN KEY (RoleID) REFERENCES ROLE(RoleID)
-);
+-- Insert ROLE 
 INSERT INTO ROLE (RoleName) VALUES 
-('Admin'), 
-('Teacher'), 
-('Student');
--- Admin
+(N'Admin'), 
+(N'Teacher'), 
+(N'Student');
+GO
+
+-- Insert USER 
 INSERT INTO [USER] (Username, PasswordHash, FullName, Email, RoleID) 
-VALUES ('admin', '123456', 'Admin User', 'admin@example.com', 1);
+VALUES 
+(N'admin', N'123456', N'Admin User', N'admin@example.com', 1),
+(N'teacher1', N'123456', N'Teacher One', N'teacher1@example.com', 2),
+(N'student1', N'123456', N'Student One', N'student1@example.com', 3);
+GO
 
--- Giáo viên
-INSERT INTO [USER] (Username, PasswordHash, FullName, Email, RoleID) 
-VALUES ('teacher1', '123456', 'Teacher One', 'teacher1@example.com', 2);
+-- Insert TEACHER 
+INSERT INTO TEACHER (FullName, PhoneNumber, Email, Expertise)
+VALUES 
+(N'Giáo viên A', N'0123456789', N'teacherA@example.com', N'Tiếng Anh giao tiếp'),
+(N'Giáo viên B', N'0987654321', N'teacherB@example.com', N'Tiếng Anh thương mại'),
+(N'Giáo viên C', N'0911223344', N'teacherC@example.com', N'Tiếng Anh chuyên ngành');
+GO
 
--- Học sinh
-INSERT INTO [USER] (Username, PasswordHash, FullName, Email, RoleID) 
-VALUES ('student1', '123456', 'Student One', 'student1@example.com', 3);
+-- Insert CLASS (TeacherID phải khớp với TEACHER)
+INSERT INTO CLASS (ClassName, Schedule, Location, TeacherID, ClassTime)
+VALUES 
+(N'Lớp Tiếng Anh 1', N'Mon/Wed/Fri', N'Phòng A', 1, N'08:00'),
+(N'Lớp Tiếng Anh 2', N'Tue/Thu', N'Phòng B', 2, N'09:30'),
+(N'Lớp Tiếng Anh Nâng Cao', N'Mon/Tue/Thu', N'Phòng C', 1, N'14:00'),
+(N'Lớp Tiếng Anh Giao Tiếp', N'Wed/Fri', N'Phòng D', 3, N'16:30');
+GO
 
-SELECT * FROM [USER];
-SELECT * FROM ROLE;
+-- Insert PARENT 
+INSERT INTO PARENT (FullName, PhoneNumber, Email)
+VALUES 
+(N'Phụ huynh A', N'0123456789', N'parentA@example.com'),
+(N'Phụ huynh B', N'0987654321', N'parentB@example.com');
+GO
 
-SELECT * FROM [USER] WHERE Username = 'admin';
+-- Insert STUDENT  (ParentID phải khớp với PARENT)
+INSERT INTO STUDENT (FullName, PhoneNumber, Email, DateOfBirth, Address, ParentID)
+VALUES 
+(N'Học sinh 1', N'0123456789', N'student1@example.com', '2005-01-01', N'Địa chỉ 1', 1),
+(N'Học sinh 2', N'0987654321', N'student2@example.com', '2006-02-02', N'Địa chỉ 2', 2);
+GO
 
+-- Insert ENROLLMENT 
+INSERT INTO ENROLLMENT (StudentID, ClassID, RegistrationDate)
+VALUES 
+(1, 1, GETDATE()),
+(2, 2, GETDATE());
+GO
+
+-- Insert ATTENDANCE 
+INSERT INTO ATTENDANCE (EnrollmentID, Date, Status)
+VALUES 
+(1, GETDATE(), N'Present'),
+(2, GETDATE(), N'Absent');
+GO
+
+-- Insert FEEDBACK 
+INSERT INTO FEEDBACK (EnrollmentID, TeacherID, Comments, Date)
+VALUES 
+(1, 1, N'Tốt', GETDATE()),
+(2, 2, N'Cần cải thiện', GETDATE());
+GO
+
+--------------------------------------------------
+-- Thiết lập ràng buộc ON DELETE cho các bảng con (nếu cần)
+--------------------------------------------------
+ALTER TABLE ENROLLMENT 
+DROP CONSTRAINT FK_Enrollment_Student;
+GO
+ALTER TABLE ENROLLMENT 
+ADD CONSTRAINT FK_Enrollment_Student
+FOREIGN KEY (StudentID) REFERENCES STUDENT(StudentID) ON DELETE CASCADE;
+GO
+
+ALTER TABLE ATTENDANCE 
+DROP CONSTRAINT FK_Attendance_Enrollment;
+GO
+ALTER TABLE ATTENDANCE 
+ADD CONSTRAINT FK_Attendance_Enrollment
+FOREIGN KEY (EnrollmentID) REFERENCES ENROLLMENT(EnrollmentID) ON DELETE CASCADE;
+GO
+
+ALTER TABLE FEEDBACK 
+DROP CONSTRAINT FK_Feedback_Enrollment;
+GO
+ALTER TABLE FEEDBACK 
+ADD CONSTRAINT FK_Feedback_Enrollment
+FOREIGN KEY (EnrollmentID) REFERENCES ENROLLMENT(EnrollmentID) ON DELETE CASCADE;
+GO
+
+-- Fix teacher email
+UPDATE TEACHER
+SET Email = 'teacher1@example.com'
+WHERE FullName = 'Giáo viên A';
+GO
+
+
+
+select * from STUDENT
+--Cập nhật học viên
+INSERT INTO STUDENT (FullName, PhoneNumber, Email, DateOfBirth, Address, ParentID)
+VALUES (N'Học sinh 3', N'0345678912', N'student3@example.com', '2007-03-03', N'Địa chỉ 3', 1);
+
+INSERT INTO ENROLLMENT (StudentID, ClassID, RegistrationDate)
+VALUES ((SELECT StudentID FROM STUDENT WHERE Email = 'student3@example.com'), 1, GETDATE());
+
+--Cập nhật tài khoản
+INSERT INTO [USER] (Username, PasswordHash, FullName, Email, RoleID)  
+VALUES  
+(N'student2', N'123456', N'Student Two', N'student2@example.com', 3),  
+(N'student3', N'123456', N'Student Three', N'student3@example.com', 3);
+
+INSERT INTO [USER] (Username, PasswordHash, FullName, Email, RoleID)  
+VALUES  
+(N'teacher2', N'123456', N'Teacher Two', N'teacher2@example.com', 2),  
+(N'teacher3', N'123456', N'Teacher Three', N'teacher3@example.com', 2);
+
+
+UPDATE STUDENT
+SET Email = 'student2@example.com'
+WHERE FullName = 'Học sinh 2';
+
+UPDATE STUDENT
+SET Email = 'student3@example.com'
+WHERE FullName = 'Học sinh 3';
+
+UPDATE TEACHER
+SET Email = 'teacher2@example.com'
+WHERE FullName = 'Giáo viên B';
+
+UPDATE TEACHER
+SET Email = 'teacher3@example.com'
+WHERE FullName = 'Giáo viên C';
+
+--------------------------------------------------
+-- Kiểm tra quan hệ giữa STUDENT và CLASS qua Enrollment
+--------------------------------------------------
+SELECT s.StudentID, s.FullName, c.ClassName
+FROM STUDENT s
+JOIN ENROLLMENT e ON s.StudentID = e.StudentID
+JOIN CLASS c ON e.ClassID = c.ClassID;
+GO
+
+--------------------------------------------------
+-- Thêm cột AttendanceStatus vào bảng STUDENT để lưu trạng thái điểm danh
+--------------------------------------------------
+ALTER TABLE STUDENT
+ADD AttendanceStatus NVARCHAR(50) NULL;
+GO
+
+SELECT StudentID, FullName, AttendanceStatus FROM STUDENT;
+GO

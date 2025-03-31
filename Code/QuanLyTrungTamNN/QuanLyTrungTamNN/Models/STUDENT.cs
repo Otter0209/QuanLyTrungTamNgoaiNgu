@@ -27,6 +27,7 @@ namespace QuanLyTrungTamNN.Models
         public Nullable<System.DateTime> DateOfBirth { get; set; }
         public string Address { get; set; }
         public Nullable<int> ParentID { get; set; }
+        public string AttendanceStatus { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ENROLLMENT> ENROLLMENTs { get; set; }

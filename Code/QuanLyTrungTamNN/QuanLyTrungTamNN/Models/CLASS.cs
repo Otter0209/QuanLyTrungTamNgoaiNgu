@@ -18,6 +18,7 @@ namespace QuanLyTrungTamNN.Models
         public CLASS()
         {
             this.ENROLLMENTs = new HashSet<ENROLLMENT>();
+            this.BUOIHOCs = new HashSet<BUOIHOC>();
         }
     
         public int ClassID { get; set; }
@@ -25,9 +26,12 @@ namespace QuanLyTrungTamNN.Models
         public string Schedule { get; set; }
         public string Location { get; set; }
         public int TeacherID { get; set; }
+        public string ClassTime { get; set; }
     
         public virtual TEACHER TEACHER { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ENROLLMENT> ENROLLMENTs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<BUOIHOC> BUOIHOCs { get; set; }
     }
 }

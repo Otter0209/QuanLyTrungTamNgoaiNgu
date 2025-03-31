@@ -1,0 +1,36 @@
+﻿@model List<QuanLyTrungTamNN.Models.CLASS>
+
+@{
+    ViewBag.Title = "Lớp đã đăng ký";
+}
+
+<h2>Lớp học đã đăng ký</h2>
+
+@if (Model != null && Model.Any())
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Mã lớp</th>
+                <th>Tên lớp</th>
+                <th>Giáo viên</th>
+                <th>Thời gian</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var cls in Model)
+            {
+                <tr>
+                    <td>@cls.ClassID</td>
+                    <td>@cls.ClassName</td>
+                    <td>@cls.TEACHER.FullName</td>
+                    <td>@cls.Schedule</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Bạn chưa đăng ký lớp học nào.</p>
+}
